@@ -1,0 +1,22 @@
+<style>
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+
+    p {
+        font-weight: bold;
+    }
+</style>
+
+<h1> Results </h1>
+
+<h2>Click on Posters to be taken to IMDB page!</h2>
+
+<% for(let i = 0; data["Search"].length > i; i++) { %>
+    <a href="https://www.imdb.com/title/<%=data["Search"][i]["imdbID"] %>/">
+    <img src="<%= data["Search"][i]["Poster"] %>" > 
+    </a>
+    
+
+<% } %>
